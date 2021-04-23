@@ -1,4 +1,4 @@
-async function refresh(){
+function refresh(){
     console.log("Func refresh")
     let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/temperature"
 
@@ -25,7 +25,7 @@ function update(){
 
 
 function refreshButton(){
-    var y = await refresh()
+    var y = refresh()
     console.log(y)
     update()
     //console.log(a)
