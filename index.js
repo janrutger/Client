@@ -1,6 +1,6 @@
 function refresh(){
     console.log("Func refresh")
-    let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/temperature"
+    let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/Humidity"
     //let url = "ServerResponse.json"
 
     fetch(url)
@@ -15,20 +15,24 @@ function update(info){
     console.log("Func update")
     console.log(info)
 
-    //value = info["VALUE_LAST"]
     console.log(Object.keys(info["VALUE_LAST"])[0])
     parm = Object.keys(info["VALUE_LAST"])[0]
-    //val = info["VALUE_LAST"]
-    //console.log(val)
-    //console.log(val["T"])
-    //for (key of val){   
-     //   console.log(key[0])
-    //}
 
+    value  = info["VALUE_LAST"][parm]
+    marker = info["VALUE_N_AVERAGE"][parm]
+
+    if (marker < value){
+        markerValue = "Higher"
+    } else if (marker > value){
+        markerValue = "Lower"
+    } else {
+        markerValue = "Same"
+    }
+   
     document.getElementById("parmName").innerHTML=info["PARAMETER"]
-    document.getElementById("parmValue").innerHTML=info["VALUE_LAST"][parm]
+    document.getElementById("parmValue").innerHTML=value
     document.getElementById("parmMean").innerHTML=info["VALUE_AVERAGE"][parm]
-    document.getElementById("parmMarker").innerHTML=info["VALUE_N_AVERAGE"][parm]
+    document.getElementById("parmMarker").innerHTML=markerValue
 }
 
 
