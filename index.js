@@ -15,24 +15,22 @@ function update(info){
     console.log("Func update")
     console.log(info)
 
-    console.log(Object.keys(info["VALUE_LAST"])[0])
     parm = Object.keys(info["VALUE_LAST"])[0]
-
     value  = info["VALUE_LAST"][parm]
-    marker = info["VALUE_N_AVERAGE"][parm]
+    markerValue = info["VALUE_N_AVERAGE"][parm]
 
-    if (marker < value){
-        markerValue = "Higher"
-    } else if (marker > value){
-        markerValue = "Lower"
+    if (markerValue < value){
+        marker = "Higher"
+    } else if (markerValue > value){
+        marker = "Lower"
     } else {
-        markerValue = "Same"
+        marker = "Same"
     }
    
     document.getElementById("parmName").innerHTML=info["PARAMETER"]
     document.getElementById("parmValue").innerHTML=value
     document.getElementById("parmMean").innerHTML=info["VALUE_AVERAGE"][parm]
-    document.getElementById("parmMarker").innerHTML=markerValue
+    document.getElementById("parmMarker").innerHTML=marker
 }
 
 
