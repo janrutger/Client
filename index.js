@@ -1,6 +1,6 @@
 function refresh(){
     console.log("Func refresh")
-    let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/Humidity"
+    let url = "http://rest:5000/slice/json/now/36/5/Amsterdam/temperature"
     //let url = "ServerResponse.json"
 
     fetch(url)
@@ -27,7 +27,8 @@ function update(info){
         marker = "Same"
     }
    
-    document.getElementById("parmName").innerHTML=info["PARAMETER"]
+    document.getElementById("stationName").innerHTML=info["STATION"]
+    document.getElementById("parmName").innerHTML=info["PARAMETER"].toUpperCase()
     document.getElementById("parmValue").innerHTML=value
     document.getElementById("parmMean").innerHTML=info["VALUE_AVERAGE"][parm]
     document.getElementById("parmMarker").innerHTML=marker
