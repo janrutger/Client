@@ -1,6 +1,7 @@
 async function refresh(){
     console.log("Func refresh")
     let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/temperature"
+    //let url = "ServerResponse.json"
 
 
     /*fetch(url)

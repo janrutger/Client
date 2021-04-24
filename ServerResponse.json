@@ -1,0 +1,43 @@
+{
+  "ANSWER": {
+    "LAST_TIME_AT": "Sat, 24 Apr 2021 08:20:27 GMT", 
+    "LAST_TIME_FOR": "Sat, 24 Apr 2021 10:20:00 GMT", 
+    "LAST_TIME_QUERY": "Sat, 24 Apr 2021 10:36:27 GMT", 
+    "PARAMETER": "temperature", 
+    "SLICE_LEN": 7, 
+    "STATION": "Amsterdam", 
+    "TIME_LABELS": [
+      "Sat, 24 Apr 2021 08:38:00 GMT", 
+      "Sat, 24 Apr 2021 08:55:00 GMT", 
+      "Sat, 24 Apr 2021 09:12:00 GMT", 
+      "Sat, 24 Apr 2021 09:29:00 GMT", 
+      "Sat, 24 Apr 2021 09:46:00 GMT", 
+      "Sat, 24 Apr 2021 10:03:00 GMT", 
+      "Sat, 24 Apr 2021 10:20:00 GMT"
+    ], 
+    "UNITS": "c", 
+    "VALUE_AVERAGE": {
+      "T": 20.72714285714286
+    }, 
+    "VALUE_LAST": {
+      "T": 20.73
+    }, 
+    "VALUE_LIST": {
+      "T": [
+        20.69, 
+        20.71, 
+        20.73, 
+        20.73, 
+        20.75, 
+        20.75, 
+        20.73
+      ]
+    }, 
+    "VALUE_MEDIAN": {
+      "T": 20.73
+    }, 
+    "VALUE_N_AVERAGE": {
+      "T": 20.738
+    }
+  }
+}
