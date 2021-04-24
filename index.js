@@ -1,17 +1,22 @@
-function refresh(){
+async function refresh(){
     console.log("Func refresh")
     let url = "http://rest:5000/slice/json/now/2/5/Amsterdam/temperature"
 
 
-    fetch(url)
+    /*fetch(url)
     .then(res => res.json())
     .then((out) => {
         //console.log('Output: ', out["ANSWER"]);
         answer = out['ANSWER']
         console.log(answer)
         return answer
-        }).catch(err => console.error(err));
-        
+        }).catch(err => console.error(err)); */
+    
+    let response = await fetch(url)
+    let data = await response.json()
+    console.log(data["ANSWER"])
+    return data
+
 }   
 
 function update(){
