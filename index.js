@@ -63,15 +63,15 @@ function plot(info){
     var resultArr = [];
 
     for (let i = 0; i < xas.length; i++) {
-        resultArr.push([xas[i], yas[i]]);
+        resultArr.push([new Date(xas[i]), yas[i]]);
     };
 
     console.log(resultArr); // prints the result
     //Google Code
 
     var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Day');
-      data.addColumn('number', 'Guardians of the Galaxy');
+      data.addColumn('datetime', 'Date');
+      data.addColumn('number', info["PARAMETER"]);
 
       data.addRows(resultArr)
 
@@ -97,10 +97,10 @@ function plot(info){
 
       var options = {
         chart: {
-          title: 'Box Office Earnings in First Two Weeks of Opening',
-          subtitle: 'in millions of dollars (USD)'
+          title: info["PARAMETER"].toUpperCase(),
+          subtitle: parm + " " + info["UNITS"]
         },
-        width: 900,
+        width: 1200,
         height: 500
       };
 
