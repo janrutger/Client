@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="index.js"></script>
-    <title>Document</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link   type="text/css" rel="stylesheet" href="index.css">
+    <title>MFA</title>
 </head>
 <body>
-    <div id="header">
-        <H1 id="stationName">My first App</H1>
-    </div>
-
-    <div id="content">
-        <div id="numbers">
-            <p id="parmName">Parameter name</p>
-            <p id="parmValue">Parameter val</p>
-            <p id="parmMean">Parameter mean</p>
-            <p id="parmMarker">Parameter marker</p>
+    <div id=application>
+        <h1 id=applicationName>Wheater</h1>
+    
+        <div id="station">
+            <H1 id="stationName">My first App</H1>
         </div>
 
-        <button id="refresh" type="button" onclick="refreshButton()">Refresh</button>
+        <div id="parameter">
+            <div id="numbers">
+                <p id="parmName">Parameter name</p>
+                <p id="parmValue">Parameter val</p>
+                <p id="parmMean">Parameter mean</p>
+                <p id="parmMarker">Parameter marker</p>
+            </div>
+
+            <button id="refresh" type="button" onclick="refreshButton()">Refresh</button>
+
+        </div>
 
         <div id="graph">
             <p id="PlotGraph">Plot de graph here</p>
         </div>
     </div>
+
 </body>
 </html>
